@@ -1,0 +1,729 @@
+{
+  "description": "2D Pixel Dungeon asset pack. All sprites are 16x16 pixels. Animations are 4-frame idle loops at ~5fps.",
+
+  "tileset": {
+    "file": "character and tileset/Dungeon_Tileset.png",
+    "tileSize": 16,
+    "description": "Dungeon environment tiles for building rooms and corridors",
+    "sprites": {
+      "wall-left": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "description": "Left wall edge, vertical stone bricks"
+      },
+      "wall-middle": {
+        "x": 16,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "description": "Middle wall segment, flat stone surface"
+      },
+      "wall-middle-with-dirt": {
+        "x": 48,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "description": "Middle wall segment with dirt/moss stain"
+      },
+      "wall-right": {
+        "x": 80,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "description": "Right wall edge, vertical stone bricks"
+      },
+      "floor-full-border": {
+        "x": 16,
+        "y": 16,
+        "w": 16,
+        "h": 16,
+        "description": "Floor tile with visible grid border on all edges"
+      },
+      "floor-normal": {
+        "x": 48,
+        "y": 32,
+        "w": 16,
+        "h": 16,
+        "description": "Seamless floor tile, dark stone, tiles without visible seams"
+      },
+      "wall-bottom-left": {
+        "x": 0,
+        "y": 64,
+        "w": 16,
+        "h": 16,
+        "description": "Bottom-left wall corner"
+      },
+      "wall-bottom": {
+        "x": 32,
+        "y": 64,
+        "w": 16,
+        "h": 16,
+        "description": "Bottom wall segment, horizontal stone edge"
+      },
+      "wall-bottom-right": {
+        "x": 80,
+        "y": 64,
+        "w": 16,
+        "h": 16,
+        "description": "Bottom-right wall corner"
+      },
+      "gate-left": {
+        "x": 96,
+        "y": 48,
+        "w": 16,
+        "h": 16,
+        "description": "Left half of dungeon gate/door entrance"
+      },
+      "gate-right": {
+        "x": 112,
+        "y": 48,
+        "w": 16,
+        "h": 16,
+        "description": "Right half of dungeon gate/door entrance"
+      },
+      "shield": {
+        "x": 128,
+        "y": 48,
+        "w": 16,
+        "h": 16,
+        "description": "Decorative wall shield, heraldic crest"
+      },
+      "bone": {
+        "x": 128,
+        "y": 96,
+        "w": 16,
+        "h": 16,
+        "description": "Bone remains on the floor"
+      },
+      "flag": {
+        "x": 64,
+        "y": 112,
+        "w": 16,
+        "h": 16,
+        "description": "Small banner/flag on a pole"
+      },
+      "skeleton": {
+        "x": 112,
+        "y": 112,
+        "w": 16,
+        "h": 16,
+        "description": "Dead skeleton lying on the ground, decoration"
+      },
+      "coin": {
+        "x": 96,
+        "y": 128,
+        "w": 16,
+        "h": 16,
+        "description": "Gold coin pickup"
+      },
+      "key-silver": {
+        "x": 128,
+        "y": 128,
+        "w": 16,
+        "h": 16,
+        "description": "Silver key, opens standard doors"
+      },
+      "key-gold": {
+        "x": 144,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "description": "Gold key, opens special/boss doors"
+      },
+      "torch": {
+        "x": 0,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "description": "Wall-mounted torch with flame"
+      }
+    }
+  },
+
+  "characters": {
+    "file": "character and tileset/Dungeon_Character_2.png",
+    "tileSize": 16,
+    "gridCols": 7,
+    "gridRows": 2,
+    "description": "Static character sprites on a 16x16 grid. Row 1 is hero variants, row 2 is more heroes/NPCs. Use (col * 16, row * 16) to extract.",
+    "sprites": {
+      "char-5": {
+        "x": 64,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "role": "player",
+        "description": "Priest warrior with weapon"
+      },
+      "char-6": {
+        "x": 80,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "role": "player",
+        "description": "Priest archer, bones with bow"
+      },
+      "char-7": {
+        "x": 96,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "role": "player",
+        "description": "Priest with a knife"
+      },
+      "char-8": {
+        "x": 0,
+        "y": 16,
+        "w": 16,
+        "h": 16,
+        "role": "enemy",
+        "description": "Blue flame spirit, ghostly wisp"
+      },
+      "char-9": {
+        "x": 16,
+        "y": 16,
+        "w": 16,
+        "h": 16,
+        "role": "enemy",
+        "description": "Blue beetle creature, armored insect"
+      },
+      "char-10": {
+        "x": 32,
+        "y": 16,
+        "w": 16,
+        "h": 16,
+        "role": "enemy",
+        "description": "Dark warrior with cape, front-facing"
+      },
+      "char-11": {
+        "x": 48,
+        "y": 16,
+        "w": 16,
+        "h": 16,
+        "role": "enemy",
+        "description": "Light-armored rogue, leather gear"
+      },
+      "char-12": {
+        "x": 64,
+        "y": 16,
+        "w": 16,
+        "h": 16,
+        "role": "enemy",
+        "description": "Bone creature, multi-limbed skeleton beast"
+      },
+      "char-13": {
+        "x": 80,
+        "y": 16,
+        "w": 16,
+        "h": 16,
+        "role": "enemy",
+        "description": "Spider monster, brown arachnid"
+      },
+      "char-14": {
+        "x": 96,
+        "y": 16,
+        "w": 16,
+        "h": 16,
+        "role": "enemy",
+        "description": "Cloaked vampire, dark figure with red eyes"
+      }
+    }
+  },
+
+  "animations": {
+    "description": "4-frame idle animation loops. Each frame is a separate 16x16 PNG file. Recommended playback: 5fps (200ms per frame).",
+
+    "characters": {
+      "priest1": {
+        "description": "Hooded priest/cleric, light robes, front-facing idle sway",
+        "frames": [
+          "Character_animation/priests_idle/priest1/v2/priest1_v2_1.png",
+          "Character_animation/priests_idle/priest1/v2/priest1_v2_2.png",
+          "Character_animation/priests_idle/priest1/v2/priest1_v2_3.png",
+          "Character_animation/priests_idle/priest1/v2/priest1_v2_4.png"
+        ]
+      },
+      "priest2": {
+        "description": "Dark-robed priest, heavier build, front-facing idle sway",
+        "frames": [
+          "Character_animation/priests_idle/priest2/v2/priest2_v2_1.png",
+          "Character_animation/priests_idle/priest2/v2/priest2_v2_2.png",
+          "Character_animation/priests_idle/priest2/v2/priest2_v2_3.png",
+          "Character_animation/priests_idle/priest2/v2/priest2_v2_4.png"
+        ]
+      },
+      "priest3": {
+        "description": "Elder priest with grey robes, staff-holding idle sway",
+        "frames": [
+          "Character_animation/priests_idle/priest3/v2/priest3_v2_1.png",
+          "Character_animation/priests_idle/priest3/v2/priest3_v2_2.png",
+          "Character_animation/priests_idle/priest3/v2/priest3_v2_3.png",
+          "Character_animation/priests_idle/priest3/v2/priest3_v2_4.png"
+        ]
+      },
+      "skeleton1": {
+        "description": "Basic skeleton enemy, armed, rattling idle animation",
+        "frames": [
+          "Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_1.png",
+          "Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_2.png",
+          "Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_3.png",
+          "Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_4.png"
+        ]
+      },
+      "skeleton2": {
+        "description": "Armored skeleton enemy, bulkier bones, idle rattle",
+        "frames": [
+          "Character_animation/monsters_idle/skeleton2/v2/skeleton2_v2_1.png",
+          "Character_animation/monsters_idle/skeleton2/v2/skeleton2_v2_2.png",
+          "Character_animation/monsters_idle/skeleton2/v2/skeleton2_v2_3.png",
+          "Character_animation/monsters_idle/skeleton2/v2/skeleton2_v2_4.png"
+        ]
+      },
+      "skull": {
+        "description": "Floating blue skull, ghostly enemy, bobbing idle",
+        "frames": [
+          "Character_animation/monsters_idle/skull/v2/skull_v2_1.png",
+          "Character_animation/monsters_idle/skull/v2/skull_v2_2.png",
+          "Character_animation/monsters_idle/skull/v2/skull_v2_3.png",
+          "Character_animation/monsters_idle/skull/v2/skull_v2_4.png"
+        ]
+      },
+      "vampire": {
+        "description": "Cloaked vampire, dark figure, menacing idle sway",
+        "frames": [
+          "Character_animation/monsters_idle/vampire/v2/vampire_v2_1.png",
+          "Character_animation/monsters_idle/vampire/v2/vampire_v2_2.png",
+          "Character_animation/monsters_idle/vampire/v2/vampire_v2_3.png",
+          "Character_animation/monsters_idle/vampire/v2/vampire_v2_4.png"
+        ]
+      }
+    },
+
+    "items": {
+      "coin": {
+        "description": "Gold coin spinning animation, collectible currency",
+        "frames": [
+          "items and trap_animation/coin/coin_1.png",
+          "items and trap_animation/coin/coin_2.png",
+          "items and trap_animation/coin/coin_3.png",
+          "items and trap_animation/coin/coin_4.png"
+        ]
+      },
+      "flag": {
+        "description": "Banner flag waving in the wind on a pole",
+        "frames": [
+          "items and trap_animation/flag/flag_1.png",
+          "items and trap_animation/flag/flag_2.png",
+          "items and trap_animation/flag/flag_3.png",
+          "items and trap_animation/flag/flag_4.png"
+        ]
+      },
+      "chest-closed": {
+        "description": "Large treasure chest, closed lid, idle shimmer",
+        "frames": [
+          "items and trap_animation/chest/chest_1.png",
+          "items and trap_animation/chest/chest_2.png",
+          "items and trap_animation/chest/chest_3.png",
+          "items and trap_animation/chest/chest_4.png"
+        ]
+      },
+      "chest-open": {
+        "description": "Large treasure chest, lid open, glowing contents",
+        "frames": [
+          "items and trap_animation/chest/chest_open_1.png",
+          "items and trap_animation/chest/chest_open_2.png",
+          "items and trap_animation/chest/chest_open_3.png",
+          "items and trap_animation/chest/chest_open_4.png"
+        ]
+      },
+      "mini-chest-closed": {
+        "description": "Small treasure chest, closed lid, idle shimmer",
+        "frames": [
+          "items and trap_animation/mini_chest/mini_chest_1.png",
+          "items and trap_animation/mini_chest/mini_chest_2.png",
+          "items and trap_animation/mini_chest/mini_chest_3.png",
+          "items and trap_animation/mini_chest/mini_chest_4.png"
+        ]
+      },
+      "mini-chest-open": {
+        "description": "Small treasure chest, lid open, glowing contents",
+        "frames": [
+          "items and trap_animation/mini_chest/mini_chest_open_1.png",
+          "items and trap_animation/mini_chest/mini_chest_open_2.png",
+          "items and trap_animation/mini_chest/mini_chest_open_3.png",
+          "items and trap_animation/mini_chest/mini_chest_open_4.png"
+        ]
+      },
+      "box-1": {
+        "description": "Wooden crate, large, breakable container",
+        "frames": [
+          "items and trap_animation/box_1/box_1_1.png",
+          "items and trap_animation/box_1/box_1_2.png",
+          "items and trap_animation/box_1/box_1_3.png",
+          "items and trap_animation/box_1/box_1_4.png"
+        ]
+      },
+      "box-2": {
+        "description": "Wooden barrel, large, breakable container",
+        "frames": [
+          "items and trap_animation/box_2/box_2_1.png",
+          "items and trap_animation/box_2/box_2_2.png",
+          "items and trap_animation/box_2/box_2_3.png",
+          "items and trap_animation/box_2/box_2_4.png"
+        ]
+      },
+      "mini-box-1": {
+        "description": "Small wooden crate, breakable container",
+        "frames": [
+          "items and trap_animation/mini_box_1/mini_box_1_1.png",
+          "items and trap_animation/mini_box_1/mini_box_1_2.png",
+          "items and trap_animation/mini_box_1/mini_box_1_3.png",
+          "items and trap_animation/mini_box_1/mini_box_1_4.png"
+        ]
+      },
+      "mini-box-2": {
+        "description": "Small wooden barrel, breakable container",
+        "frames": [
+          "items and trap_animation/mini_box_2/mini_box_2_1.png",
+          "items and trap_animation/mini_box_2/mini_box_2_2.png",
+          "items and trap_animation/mini_box_2/mini_box_2_3.png",
+          "items and trap_animation/mini_box_2/mini_box_2_4.png"
+        ]
+      },
+      "key-1": {
+        "description": "Silver key, shimmering idle animation, opens standard doors",
+        "frames": [
+          "items and trap_animation/keys/keys_1_1.png",
+          "items and trap_animation/keys/keys_1_2.png",
+          "items and trap_animation/keys/keys_1_3.png",
+          "items and trap_animation/keys/keys_1_4.png"
+        ]
+      },
+      "key-2": {
+        "description": "Gold key, shimmering idle animation, opens special doors",
+        "frames": [
+          "items and trap_animation/keys/keys_2_1.png",
+          "items and trap_animation/keys/keys_2_2.png",
+          "items and trap_animation/keys/keys_2_3.png",
+          "items and trap_animation/keys/keys_2_4.png"
+        ]
+      },
+      "flask-red": {
+        "description": "Red potion flask, health potion, bubbling idle",
+        "frames": [
+          "items and trap_animation/flasks/flasks_1_1.png",
+          "items and trap_animation/flasks/flasks_1_2.png",
+          "items and trap_animation/flasks/flasks_1_3.png",
+          "items and trap_animation/flasks/flasks_1_4.png"
+        ]
+      },
+      "flask-green": {
+        "description": "Green potion flask, poison or stamina potion, bubbling idle",
+        "frames": [
+          "items and trap_animation/flasks/flasks_2_1.png",
+          "items and trap_animation/flasks/flasks_2_2.png",
+          "items and trap_animation/flasks/flasks_2_3.png",
+          "items and trap_animation/flasks/flasks_2_4.png"
+        ]
+      },
+      "flask-blue": {
+        "description": "Blue potion flask, mana potion, bubbling idle",
+        "frames": [
+          "items and trap_animation/flasks/flasks_3_1.png",
+          "items and trap_animation/flasks/flasks_3_2.png",
+          "items and trap_animation/flasks/flasks_3_3.png",
+          "items and trap_animation/flasks/flasks_3_4.png"
+        ]
+      },
+      "flask-pink": {
+        "description": "Pink potion flask, special/rare potion, bubbling idle",
+        "frames": [
+          "items and trap_animation/flasks/flasks_4_1.png",
+          "items and trap_animation/flasks/flasks_4_2.png",
+          "items and trap_animation/flasks/flasks_4_3.png",
+          "items and trap_animation/flasks/flasks_4_4.png"
+        ]
+      }
+    },
+
+    "lighting": {
+      "torch": {
+        "description": "Standing torch, flickering flame animation",
+        "frames": [
+          "items and trap_animation/torch/torch_1.png",
+          "items and trap_animation/torch/torch_2.png",
+          "items and trap_animation/torch/torch_3.png",
+          "items and trap_animation/torch/torch_4.png"
+        ]
+      },
+      "side-torch": {
+        "description": "Wall-mounted side torch, flickering flame",
+        "frames": [
+          "items and trap_animation/torch/side_torch_1.png",
+          "items and trap_animation/torch/side_torch_2.png",
+          "items and trap_animation/torch/side_torch_3.png",
+          "items and trap_animation/torch/side_torch_4.png"
+        ]
+      },
+      "candlestick-1": {
+        "description": "Tall candlestick, single candle, flickering flame",
+        "frames": [
+          "items and trap_animation/torch/candlestick_1_1.png",
+          "items and trap_animation/torch/candlestick_1_2.png",
+          "items and trap_animation/torch/candlestick_1_3.png",
+          "items and trap_animation/torch/candlestick_1_4.png"
+        ]
+      },
+      "candlestick-2": {
+        "description": "Short candlestick, single candle, flickering flame",
+        "frames": [
+          "items and trap_animation/torch/candlestick_2_1.png",
+          "items and trap_animation/torch/candlestick_2_2.png",
+          "items and trap_animation/torch/candlestick_2_3.png",
+          "items and trap_animation/torch/candlestick_2_4.png"
+        ]
+      }
+    },
+
+    "enemies": {
+      "description": "Enemy sprite sheet animations exported from enemies.aseprite. Each file is a horizontal strip of 32x32 frames. Covers idle, movement, attack, take_damage, and death states.",
+      "sourceFile": "Enemy_Animations_Set/enemies.aseprite",
+
+      "skeleton1": {
+        "idle": {
+          "file": "Enemy_Animations_Set/enemies-skeleton1_idle.png",
+          "frameSize": 32,
+          "frameCount": 6,
+          "description": "Skeleton warrior idle, subtle bobbing with weapon"
+        },
+        "movement": {
+          "file": "Enemy_Animations_Set/enemies-skeleton1_movement.png",
+          "frameSize": 32,
+          "frameCount": 10,
+          "description": "Skeleton warrior walking cycle"
+        },
+        "attack": {
+          "file": "Enemy_Animations_Set/enemies-skeleton1_attack.png",
+          "frameSize": 32,
+          "frameCount": 9,
+          "description": "Skeleton warrior swinging weapon forward"
+        },
+        "take_damage": {
+          "file": "Enemy_Animations_Set/enemies-skeleton1_take_damage.png",
+          "frameSize": 32,
+          "frameCount": 5,
+          "description": "Skeleton warrior recoiling from hit"
+        },
+        "death": {
+          "file": "Enemy_Animations_Set/enemies-skeleton1_death.png",
+          "frameSize": 32,
+          "frameCount": 17,
+          "description": "Skeleton warrior collapsing and disintegrating into bones"
+        }
+      },
+
+      "skeleton2": {
+        "idle": {
+          "file": "Enemy_Animations_Set/enemies-skeleton2_idle.png",
+          "frameSize": 32,
+          "frameCount": 6,
+          "description": "Armored skeleton idle, heavy bobbing with shield"
+        },
+        "movement": {
+          "file": "Enemy_Animations_Set/enemies-skeleton2_movemen.png",
+          "frameSize": 32,
+          "frameCount": 10,
+          "description": "Armored skeleton walking cycle"
+        },
+        "attack": {
+          "file": "Enemy_Animations_Set/enemies-skeleton2_attack.png",
+          "frameSize": 32,
+          "frameCount": 15,
+          "description": "Armored skeleton heavy swing attack"
+        },
+        "take_damage": {
+          "file": "Enemy_Animations_Set/enemies-skeleton2_take_damage.png",
+          "frameSize": 32,
+          "frameCount": 5,
+          "description": "Armored skeleton recoiling from hit"
+        },
+        "death": {
+          "file": "Enemy_Animations_Set/enemies-skeleton2_death.png",
+          "frameSize": 32,
+          "frameCount": 15,
+          "description": "Armored skeleton collapsing and crumbling apart"
+        },
+        "death2": {
+          "file": "Enemy_Animations_Set/enemies-skeleton2_death2.png",
+          "frameSize": 32,
+          "frameCount": 15,
+          "description": "Armored skeleton alternate death, breaking into pieces"
+        }
+      },
+
+      "vampire": {
+        "idle": {
+          "file": "Enemy_Animations_Set/enemies-vampire_idle.png",
+          "frameSize": 32,
+          "frameCount": 6,
+          "description": "Cloaked vampire idle, menacing sway"
+        },
+        "movement": {
+          "file": "Enemy_Animations_Set/enemies-vampire_movement.png",
+          "frameSize": 32,
+          "frameCount": 8,
+          "description": "Vampire gliding movement cycle"
+        },
+        "attack": {
+          "file": "Enemy_Animations_Set/enemies-vampire_attack.png",
+          "frameSize": 32,
+          "frameCount": 16,
+          "description": "Vampire lunging forward with cloak spread"
+        },
+        "take_damage": {
+          "file": "Enemy_Animations_Set/enemies-vampire_take_damage.png",
+          "frameSize": 32,
+          "frameCount": 5,
+          "description": "Vampire staggering back from hit"
+        },
+        "death": {
+          "file": "Enemy_Animations_Set/enemies-vampire_death.png",
+          "frameSize": 32,
+          "frameCount": 14,
+          "description": "Vampire collapsing and dissolving into shadow"
+        }
+      }
+    },
+
+    "traps": {
+      "peaks": {
+        "description": "Floor spike trap, spikes extend and retract from the ground",
+        "frames": [
+          "items and trap_animation/peaks/peaks_1.png",
+          "items and trap_animation/peaks/peaks_2.png",
+          "items and trap_animation/peaks/peaks_3.png",
+          "items and trap_animation/peaks/peaks_4.png"
+        ]
+      },
+      "arrow-trap": {
+        "description": "Arrow trap, projectile launching from wall",
+        "frames": [
+          "items and trap_animation/arrow/arrow_1.png",
+          "items and trap_animation/arrow/arrow_2.png",
+          "items and trap_animation/arrow/arrow_3.png",
+          "items and trap_animation/arrow/arrow_4.png"
+        ]
+      }
+    },
+
+    "playerAttack": {
+      "description": "Player flamethrower attack projectile. On attack, a flame projectile moves from the player toward the facing direction. Uses flamethrower-1 for vertical and flamethrower-2 for horizontal. Damage is dealt when the flame reaches the enemy.",
+      "vertical": {
+        "description": "Vertical flame projectile. Base sprite points down. Use as-is for attacking down; rotate 180° for attacking up.",
+        "baseDirection": "down",
+        "frames": [
+          "items and trap_animation/flamethrower/flamethrower_1_1.png",
+          "items and trap_animation/flamethrower/flamethrower_1_2.png",
+          "items and trap_animation/flamethrower/flamethrower_1_3.png",
+          "items and trap_animation/flamethrower/flamethrower_1_4.png"
+        ],
+        "directions": {
+          "down": { "rotation": 0 },
+          "up": { "rotation": 180 }
+        }
+      },
+      "horizontal": {
+        "description": "Horizontal flame projectile. Base sprite points right. Use as-is for attacking right; flip horizontally for attacking left.",
+        "baseDirection": "right",
+        "frames": [
+          "items and trap_animation/flamethrower/flamethrower_2_1.png",
+          "items and trap_animation/flamethrower/flamethrower_2_2.png",
+          "items and trap_animation/flamethrower/flamethrower_2_3.png",
+          "items and trap_animation/flamethrower/flamethrower_2_4.png"
+        ],
+        "directions": {
+          "right": { "rotation": 0 },
+          "left": { "flipX": true }
+        }
+      }
+    }
+  },
+
+  "sampleMap": {
+    "description": "A sample 10x8 dungeon room layout using tileset sprite names. '_' represents floor-normal. Walls form the perimeter, gate at bottom center, items scattered inside.",
+    "tileSize": 16,
+    "cols": 10,
+    "rows": 8,
+    "layers": {
+      "base": "All cells have floor-normal as the base layer drawn first",
+      "top": "The named tile is drawn on top. '_' means only floor is drawn."
+    },
+    "grid": [
+      [
+        "wall-left",
+        "wall-middle",
+        "wall-middle",
+        "torch",
+        "wall-middle",
+        "wall-middle-with-dirt",
+        "wall-middle",
+        "wall-middle",
+        "torch",
+        "wall-right"
+      ],
+      ["wall-left", "_", "_", "_", "_", "_", "_", "_", "_", "wall-right"],
+      [
+        "wall-left",
+        "_",
+        "shield",
+        "_",
+        "_",
+        "_",
+        "_",
+        "flag",
+        "_",
+        "wall-right"
+      ],
+      [
+        "wall-left",
+        "_",
+        "_",
+        "_",
+        "skeleton",
+        "_",
+        "bone",
+        "_",
+        "_",
+        "wall-right"
+      ],
+      ["wall-left", "_", "_", "coin", "_", "_", "_", "_", "_", "wall-right"],
+      [
+        "wall-left",
+        "_",
+        "key-gold",
+        "_",
+        "_",
+        "_",
+        "_",
+        "key-silver",
+        "_",
+        "wall-right"
+      ],
+      ["wall-left", "_", "_", "_", "_", "_", "_", "_", "_", "wall-right"],
+      [
+        "wall-bottom-left",
+        "wall-bottom",
+        "wall-bottom",
+        "wall-bottom",
+        "gate-left",
+        "gate-right",
+        "wall-bottom",
+        "wall-bottom",
+        "wall-bottom",
+        "wall-bottom-right"
+      ]
+    ]
+  }
+}
